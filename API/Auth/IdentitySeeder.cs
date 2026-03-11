@@ -1,0 +1,38 @@
+using Microsoft.AspNetCore.Identity;
+using WorkTaskDomain.Domain;
+
+public static class IdentitySeeder
+{
+    public static async Task SeedAsync(UserManager<ApplicationUser> userManager,
+    RoleManager<IdentityRole> roleManager)
+    {
+        string[] roles = {"Admin", "User"};
+        foreach (var role in roles)
+        {
+            if (await roleManager.RoleExistsAsync(role))
+            {
+                await roleManager.CreateAsync(new IdentityRole(role));
+            }
+        }
+        
+        await SeedUserAsync(userManager, "Romio", "Romio@Task.com", "Romio123!", "Admin");
+        await SeedUserAsync(userManager, "User", "User@Task.com", "User123!", "User");
+    }
+
+    private static async Task SeedUserAsync(UserManager<ApplicationUser> userManager,
+    string username, string email, string password, string role)
+    {
+        var user = await userManager.FindByNameAsync(username);
+        if (user == null)
+        {
+            user = new ApplicationUser
+            {
+                UserName = username,
+                Email = email
+            };
+
+            await userManager.CreateAsync(user, password);
+            await userManager.AddToRoleAsync(user, role);
+        }
+    }
+}

@@ -1,0 +1,6 @@
+C:\Users\Training Center 1\InSessionChallenge3\WorkTaskDomain\obj\Debug\net8.0\WorkTaskDomain.csproj.AssemblyReference.cache
+C:\Users\Training Center 1\InSessionChallenge3\WorkTaskDomain\obj\Debug\net8.0\WorkTaskDomain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Training Center 1\InSessionChallenge3\WorkTaskDomain\obj\Debug\net8.0\WorkTaskDomain.AssemblyInfoInputs.cache
+C:\Users\Training Center 1\InSessionChallenge3\WorkTaskDomain\obj\Debug\net8.0\WorkTaskDomain.AssemblyInfo.cs
+C:\Users\Training Center 1\InSessionChallenge3\WorkTaskDomain\obj\Debug\net8.0\WorkTaskDomain.csproj.CoreCompileInputs.cache
+C:\Users\Training Center 1\InSessionChallenge3\WorkTaskDomain\obj\Debug\net8.0\WorkTaskDomain.sourcelink.json

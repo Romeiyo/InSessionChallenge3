@@ -1,0 +1,42 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
+using WorkTaskDomain.Domain;
+using API.DTOs;
+
+namespace API.Controllers
+{
+    [APIController]
+    [Route("api/auth")]
+
+    public class AuthController : ControllerBase
+    {
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly TokenService _tokenService;
+        public AuthController(
+            UserManager<ApplicationUser> userManager,
+            TokenService tokenService
+        )
+        {
+            _userManager = userManager;
+            _tokenService = tokenService;
+        }
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Login(LoginDto dto)
+        {
+            var user = await _userManager.FindByNameAsync(dto.Username);
+            
+            if(user == null ||
+            !await _userManager.CheckPasswordAsync(user, dto.Password))
+            {
+                return Unauthorized();
+            }
+
+            var roles = await _userManager.GetRolesAsync(user);
+
+            var token = _tokenService.GenerateToken(user, roles);
+
+            
+        }
+    }
+}
