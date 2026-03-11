@@ -1,8 +1,5 @@
 using System.Reflection;
-using WorkTaskDomain.Logic;
-using WorkTaskDomain.Persistence;
-using WorkTaskDomain.Persistence;
-using WorkTaskDomain.Domain;
+using WorkTaskDomain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;

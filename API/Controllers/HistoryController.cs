@@ -1,9 +1,9 @@
-using WorkTaskDomain.Logic;
-using WorkTaskDomain.Persistence;
+using WorkTaskDomain;
+using WorkTaskDomain;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using API.DTOs;
+using API;
 
 [ApiController]
 [Route("api/history")]

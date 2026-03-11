@@ -1,3 +1,5 @@
+using WorkTaskDomain;
+
 namespace WorkTaskDemo;
 
 public class TaskRequest

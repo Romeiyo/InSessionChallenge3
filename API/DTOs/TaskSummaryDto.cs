@@ -1,6 +1,6 @@
 using WorkTaskDomain;
 
-namespace API.DTOs
+namespace API
 {
     public class TaskSummaryDto
     {

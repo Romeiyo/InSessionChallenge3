@@ -1,14 +1,13 @@
 using API.DTOs;
-using WorkTaskDomain.Logic;
+using WorkTaskDomain;
 using Microsoft.AspNetCore.Mvc;
 using WorkTaskDomain;
-using WorkTaskDomain.Persistence;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
 
-namespace API.controllers
+namespace API
 {
     [ApiController]
     [Route("api/tasks")]

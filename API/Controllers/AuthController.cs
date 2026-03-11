@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
-using WorkTaskDomain.Domain;
-using API.DTOs;
+using WorkTaskDomain;
+using API;
 
-namespace API.Controllers
+namespace API
 {
     [APIController]
     [Route("api/auth")]

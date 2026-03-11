@@ -12,7 +12,7 @@ public class ExceptionHandlingMiddleware
 
         response.StatusCode = exception switch
         {
-            InvalidCalculationException => StatusCodes.Status422UnprocessableEntity,
+            InvalidTaskException => StatusCodes.Status422UnprocessableEntity,
             _ => StatusCodes.Status500InternalServerError
             
         };

@@ -1,8 +1,7 @@
-using WorkTaskDomain.Domain;
-using WorkTaskDomain.Persistence;
+using WorkTaskDomain;
 using Microsoft.EntityFrameworkCore;
 
-namespace WorkTaskDomain.Persistence;
+namespace WorkTaskDomain;
 public class EFTaskStore : ITaskStore
 {
     private readonly TaskDbContext _context;

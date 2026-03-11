@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 
-namespace WorkTaskDomain.Domain
+namespace WorkTaskDomain
 {
     public class ApplicationUser : IdentityUser
     {

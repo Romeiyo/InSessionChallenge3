@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Identity;
-using WorkTaskDomain.Domain;
+using WorkTaskDomain;
 
 public static class IdentitySeeder
 {
